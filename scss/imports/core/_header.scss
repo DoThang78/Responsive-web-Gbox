@@ -1,0 +1,153 @@
+// css header
+
+header {
+    @include transition($t);
+    background-color: $header-bg-cl;
+    height: $heightHeader;
+    width: 100%;
+    display: block;
+    @include mid(true);
+    // &.active {
+    //     transition: 0.3s;
+    //     position: fixed;
+    //     z-index: 100;
+    // }
+    // position: fixed;
+    // z-index: 100;
+    .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        align-items: center;
+        .logo {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+        }
+        a {
+            i {
+                img {
+                    width: 20px;
+                }
+            }
+        }
+    }
+    .hamburger {
+        width: 25px;
+        height: 15px;
+        position: relative;
+        margin-left: 20px;
+        @include transition($t);
+        display: none;
+        cursor: pointer;
+        span,
+        &:after,
+        &:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: $yellow-cl;
+            @include transition($t);
+            display: block;
+        }
+        span {
+            top: 50%;
+            @include transition($t);
+            transform: translateY(-50%);
+        }
+        &:after {
+            bottom: 0;
+        }
+        &.active {
+            @include transition($t);
+            @include transform(rotate(-45deg));
+            &:before {
+                opacity: 0;
+                @include transition($t);
+            }
+            &::after {
+                @include transition($t);
+                @include transform(rotate(90deg));
+                top: 50%;
+            }
+        }
+    }
+    &.hide {
+        display: none;
+        @include transition($t);
+    }
+}
+
+.menus {
+    width: 100%;
+    // position: fixed;
+    // z-index: 100;
+    // top: 70px;
+    .container {
+        width: 100%;
+        height: 100%;
+        height: $heightHeader;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid $black-cl;
+    }
+    &__side {
+        margin-top: 20px;
+        ul {
+            li {
+                a {
+                    color: $black-cl;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-family: "pb";
+                    font-size: 12px;
+                    transition: 0.3s;
+                    text-align: center;
+                    &:hover {
+                        transition: 0.3s;
+                        color: $yellow-cl;
+                    }
+                }
+            }
+        }
+    }
+    &__center {
+        margin-top: 20px;
+        height: $heightHeader;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        ul {
+            display: flex;
+            margin-right: 10px;
+            li {
+                a {
+                    color: $black-cl;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-family: "pb";
+                    font-size: 12px;
+                    transition: 0.3s;
+                    text-align: center;
+                    padding: 0 30px;
+                    &:hover {
+                        transition: 0.3s;
+                        color: $yellow-cl;
+                    }
+                }
+            }
+        }
+    }
+    &.fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        background-color: $white-cl;
+    }
+}

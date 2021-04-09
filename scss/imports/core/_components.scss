@@ -1,0 +1,86 @@
+// css components
+.products {
+    &__list {
+        --heightProducts: 380px;
+        &-items {
+            height: var(--heightProducts);
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 15px;
+            padding-top: 20px;
+            .list-item {
+                .img {
+                    height: 190px;
+                    overflow: hidden;
+                    position: relative;
+                    cursor: pointer;
+                    img {
+                        @include mid(false);
+                        min-width: 100%;
+                        min-height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .text {
+                    text-align: center;
+
+                    .title {
+                        position: relative;
+                        margin-top: 30px;
+
+                        a {
+                            @include overtext(3);
+                            font-size: 12px;
+                            font-family: "pb";
+                            line-height: 30.48px;
+                            color: $black-cl;
+                            text-decoration: none;
+                            text-transform: uppercase;
+                        }
+                        &::after {
+                            content: "";
+                            width: 15px;
+                            height: 3px;
+                            background-color: $yellow-cl;
+                            display: block;
+                            @include mid(false);
+                            margin-top: 10px;
+                        }
+                    }
+                    p {
+                        font-family: "pr";
+                        font-weight: bold;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.book-now {
+    a {
+        background-color: #525355;
+        color: $yellow-cl;
+        font-family: "pex";
+        text-align: center;
+        border-radius: 5px;
+        letter-spacing: 0.25px;
+        text-transform: uppercase;
+        height: 100px;
+        width: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        text-decoration: none;
+        span:first-child {
+            font-size: 24px;
+        }
+        span:last-child {
+            font-size: 27px;
+        }
+    }
+}

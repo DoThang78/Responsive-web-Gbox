@@ -1,0 +1,13 @@
+// CSS HOMEPAGE
+.all-work {
+    .products {
+        &__list {
+            .seemore {
+                margin: 60px 0;
+                width: 100%;
+                height: 135px;
+                display: flex;
+            }
+        }
+    }
+}

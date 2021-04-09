@@ -1,0 +1,198 @@
+@-ms-viewport {
+    width: device-width;
+}
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    box-sizing: border-box;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    scroll-behavior: smooth;
+}
+html,
+body {
+    width: 100%;
+    max-width: $container-max-width;
+    margin: auto;
+    @include text($fz-text, $font-main, $lh-text, $text-cl, none);
+    background: $white-cl;
+    behavior: smooth;
+    position: relative;
+    @include customscroll();
+    .container {
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .container-fluid {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .row {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+    .no-gutters {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .no-gap > .col,
+    .no-gap > [class*="col-"] {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    @media (min-width: $xxs-min) {
+        .container {
+            max-width: 540px;
+        }
+    }
+    @media (min-width: $xs-min) {
+        .container {
+            max-width: 720px;
+        }
+    }
+    @media (min-width: $sm-min) {
+        .container {
+            max-width: 960px;
+        }
+    }
+    @media (min-width: $md-min) {
+        .container {
+            max-width: $container-width;
+        }
+    }
+
+    .mainwrapper {
+        width: 100%;
+        margin: auto;
+    }
+    @include lg {
+        // CSS responsive large desktop
+    }
+    @include md {
+        // CSS responsive desktop
+    }
+    @include sm {
+        // CSS responsive tablet
+        .info {
+            &__textbox {
+                .title {
+                    margin: 10px 0;
+                }
+            }
+        }
+    }
+    @include xs {
+        header {
+            .hamburger {
+                display: block;
+            }
+            a {
+                i {
+                    padding-right: 10px;
+                }
+            }
+        }
+
+        .menus {
+            display: none;
+        }
+
+        .info {
+            padding: 0;
+            &__textbox {
+                width: 100%;
+                padding-top: 45px;
+                .title {
+                    margin: 15px 0;
+                }
+                p {
+                    display: none;
+                }
+            }
+            &::after {
+                display: none;
+            }
+        }
+
+        .products {
+            padding: 0;
+            .container {
+                position: relative;
+            }
+            &__tags {
+                display: none;
+            }
+            &__list {
+                margin-bottom: 50px;
+                &-items {
+                    height: 100%;
+                    padding: 40px 0;
+                    grid-template-columns: repeat(1, 1fr);
+                    column-gap: 0px;
+                    padding-top: 0px;
+                    .list-item {
+                        .text {
+                            margin: 30px 0;
+                            .title {
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+                .mobileNone {
+                    display: none;
+                }
+                .seemore {
+                    height: 105px;
+                    position: absolute;
+                    top: 100%;
+                    left: 50%;
+                    transform: translate(-50%, -100%);
+                }
+            }
+        }
+
+        footer {
+            height: 485px;
+            .footer {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                &__left {
+                    padding-top: 35px;
+                    width: 100%;
+                    p {
+                        text-align: center;
+                    }
+                    .pSpace {
+                        margin: 0;
+                    }
+                    &-address {
+                        padding-top: 0;
+                    }
+                }
+                .footerNone {
+                    display: none;
+                }
+            }
+            &::after {
+                height: 235px;
+            }
+        }
+    }
+    @include xxs {
+        // CSS responsive small mobile
+    }
+}

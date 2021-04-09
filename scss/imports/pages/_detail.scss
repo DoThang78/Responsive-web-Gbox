@@ -1,0 +1,136 @@
+.project-detail {
+    padding: 0px 0 50px 0;
+    .controller {
+        width: 100%;
+        .container {
+            @include mid(true);
+            justify-content: space-between;
+            padding: 60px 0 30px 0;
+            h2 {
+                font-family: "pl";
+                font-size: 14px;
+                line-height: 22px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+            .right {
+                @include mid(true);
+                .full-screen {
+                    @include mid(true);
+                    margin-right: 60px;
+                    span {
+                        padding-right: 15px;
+                        font-size: 12px;
+                        font-family: "pr";
+                    }
+                    img {
+                        width: 13px;
+                    }
+                }
+                .back-to-all {
+                    @include mid(true);
+                    span {
+                        padding-right: 15px;
+                        font-size: 12px;
+                        font-family: "pr";
+                    }
+                    img {
+                        width: 13px;
+                    }
+                }
+            }
+        }
+    }
+    .detail__main {
+        .container {
+            padding-bottom: 50px;
+            border-bottom: 1px solid #000;
+        }
+        &-img {
+            img {
+                min-width: 100%;
+                min-height: 100%;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin-top: 40px;
+            .des,
+            .client,
+            .about-team {
+                h2 {
+                    font-family: "pl";
+                    font-size: 14px;
+                    line-height: 22px;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                }
+                p {
+                    margin-top: 20px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    line-height: 22px;
+                    font-size: 11px;
+                }
+            }
+            .client {
+                padding: 0 180px;
+            }
+            .about-team {
+                p {
+                    margin: 0;
+                }
+            }
+        }
+    }
+    @include xs {
+        .controller {
+            padding: 0px 10px;
+            .container {
+                .right {
+                    .full-screen {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .detail__main {
+            &-content {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                margin-top: 20px;
+                .des,
+                .client,
+                .about-team {
+                    margin-left: 10px;
+
+                    h2 {
+                        font-family: "pl";
+                        font-size: 14px;
+                        line-height: 22px;
+                        letter-spacing: 2px;
+                        text-transform: uppercase;
+                        margin-top: 25px;
+                    }
+                    p {
+                        margin: 0px;
+                        font-family: Arial, Helvetica, sans-serif;
+                        line-height: 22px;
+                        font-size: 11px;
+                    }
+                }
+                .client {
+                    padding: 0px;
+                }
+                .about-team {
+                    p {
+                        margin-top: 0px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,43 @@
+/* FONT FACE - font-display: fallback; */
+@font-face {
+    font-family: "pl";
+    src: url("../fonts/proximanova-light.woff2") format("woff2"),
+        url("../fonts/proximanova-light.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: "pb";
+    src: url("../fonts/Proxima-Nova-Semibold.woff2") format("woff2"),
+        url("../fonts/Proxima-Nova-Semibold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: "pr";
+    src: url("../fonts/ProximaNova-Regular.woff2") format("woff2"),
+        url("../fonts/ProximaNova-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+@font-face {
+    font-family: "db";
+    src: url("../fonts/D-DINCondensed-Bold.woff2") format("woff2"),
+        url("../fonts/D-DINCondensed-Bold.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+@font-face {
+    font-family: "pex";
+    src: url("../fonts/Proxima-Nova-Xbold.woff2") format("woff2"),
+        url("../fonts/Proxima-Nova-Xbold.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}

@@ -1,0 +1,94 @@
+// CSS HOMEPAGE
+.info {
+    width: 100%;
+    position: relative;
+    padding: 60px 0;
+
+    &__textbox {
+        h3 {
+            text-align: center;
+            font-size: 14px;
+            letter-spacing: 2px;
+            line-height: 22px;
+            font-family: "pl";
+            text-transform: uppercase;
+            font-weight: bold;
+            color: $black-cl;
+        }
+        .title {
+            margin: 30px 0;
+            text-align: center;
+            a {
+                background-color: $yellow-cl;
+                text-align: center;
+                font-size: 20px;
+                letter-spacing: 5px;
+                line-height: 30.48px;
+                font-family: "pb";
+                text-transform: uppercase;
+                color: #525355;
+                margin: 30px 0px;
+            }
+        }
+        p {
+            text-align: center;
+            font-size: 12px;
+            letter-spacing: -0.25px;
+            color: $black-cl;
+            line-height: 22px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    }
+    &::after {
+        content: "";
+        width: 320px;
+        height: 1px;
+        background: $black-cl;
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -100%);
+    }
+}
+
+.products {
+    padding: 50px 0 50px 0;
+    width: 100%;
+    .container {
+        border-bottom: 1px solid $black-cl;
+    }
+    &__tags {
+        position: relative;
+        &-text {
+            display: flex;
+            @include mid(false);
+            div {
+                padding: 0 20px;
+                font-family: "pb";
+                color: #898989;
+                font-size: 12px;
+                cursor: pointer;
+            }
+        }
+    }
+    &__list {
+        .seemore {
+            @include mid(true);
+            flex-direction: column;
+            margin-bottom: 45px;
+            p {
+                text-transform: uppercase;
+                font-family: "pb";
+                font-size: 12px;
+                line-height: 30.48px;
+            }
+            i {
+                img {
+                    height: 15px;
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+}

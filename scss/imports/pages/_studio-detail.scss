@@ -1,0 +1,312 @@
+.studio-detail {
+    .controller {
+        .container {
+            .back-to-all {
+                padding: 25px 0;
+                @include mid(true);
+                justify-content: flex-end;
+                span {
+                    padding-right: 15px;
+                    font-size: 12px;
+                    font-family: "pr";
+                }
+                img {
+                    width: 13px;
+                }
+            }
+        }
+    }
+    .detail__main {
+        .container {
+            width: 100%;
+            border-bottom: 1px solid #000;
+            padding-bottom: 50px;
+            margin-bottom: 30px;
+        }
+        &-img {
+            width: 100%;
+            height: 355px;
+            img {
+                width: 100%;
+                height: 100%;
+                min-width: 100%;
+                min-height: 100%;
+                object-fit: cover;
+            }
+        }
+        &-content {
+            height: 120px;
+            padding: 0 0px 0 15px;
+            @include mid(true);
+            justify-content: space-between;
+            .content__left {
+                display: flex;
+                align-items: center;
+                height: 100%;
+                .number {
+                    width: 120px;
+                    height: 100%;
+                    background-color: $yellow-cl;
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-transform: uppercase;
+                    p {
+                        font-family: "pr";
+                        font-size: 11px;
+                        line-height: 20px;
+                    }
+                    h2 {
+                        font-size: 61.46px;
+                        font-family: "db";
+                    }
+                }
+                .dimensions {
+                    padding-left: 70px;
+                    padding-bottom: 53px;
+                    h2 {
+                        letter-spacing: 2px;
+                        text-transform: uppercase;
+                        font-size: 12px;
+                        line-height: 30.48px;
+                        font-family: "pr";
+                    }
+                    p {
+                        font-size: 14px;
+                        font-family: "pr";
+                    }
+                }
+            }
+            .content__right {
+                padding-left: 70px;
+                padding-bottom: 53px;
+                display: flex;
+                align-items: center;
+                height: 100%;
+                .download {
+                    display: flex;
+                    padding-right: 50px;
+                    span {
+                        display: flex;
+                        font-size: 12px;
+                        font-family: "pr";
+                    }
+                }
+                img {
+                    margin: 0 10px;
+                    width: 10px;
+                }
+                .full-screen {
+                    padding-right: 50px;
+                    display: flex;
+                    span {
+                        display: flex;
+                        font-size: 12px;
+                        font-family: "pr";
+                    }
+                }
+                .btn-next {
+                    a {
+                        text-transform: none;
+                        text-decoration: none;
+                        span {
+                            text-transform: none;
+                            text-decoration: none;
+                            padding: 0 0 0px 10px;
+                            font-size: 12px;
+                            font-family: "pr";
+                            color: $black-cl;
+                        }
+                    }
+                }
+                .btn-prev {
+                    a {
+                        text-transform: none;
+                        text-decoration: none;
+                        span {
+                            text-transform: none;
+                            text-decoration: none;
+                            border-right: 1px solid #000;
+                            padding: 0 10px 0px 0px;
+                            font-size: 12px;
+                            font-family: "pr";
+                            color: $black-cl;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .detail__content {
+        .container {
+            border-bottom: 1px solid #000;
+            margin-bottom: 30px;
+            .row {
+                width: 100%;
+                padding: 0 15px;
+                .col-md-6 {
+                    width: 100%;
+
+                    article {
+                        .detail__pricing {
+                            --heightContent: 120px;
+                            height: var(--heightContent);
+                            h2 {
+                                font-family: "pex";
+                                font-size: 32px;
+                                line-height: 30.48px;
+                                letter-spacing: -0.25px;
+                            }
+                            p {
+                                padding: 30px 0;
+                                font-family: "pr";
+                                font-size: 14px;
+                                line-height: 20px;
+                            }
+                        }
+                        .pricing-table {
+                            width: 100%;
+                            margin-top: 20px;
+                            tbody {
+                                tr {
+                                    td {
+                                        height: 50px;
+                                        vertical-align: middle;
+                                        font-family: "pr";
+                                        font-size: 14px;
+                                        line-height: 50px;
+                                    }
+                                    td:first-child {
+                                        padding-left: 60px;
+                                        border-left: 1px solid #000;
+                                        border-top: 1px solid #000;
+                                        border-bottom: 1px solid #000;
+                                    }
+                                    td:last-child {
+                                        border-right: 1px solid #000;
+                                        border-top: 1px solid #000;
+                                        border-bottom: 1px solid #000;
+                                        padding-right: 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .col-md-6 {
+                    width: 100%;
+
+                    .detail__floorplan {
+                        --heightContent: 120px;
+                        height: var(--heightContent);
+                        h2 {
+                            font-family: "pex";
+                            font-size: 32px;
+                            line-height: 30.48px;
+                            letter-spacing: -0.25px;
+                        }
+                    }
+                    .img {
+                        margin-top: 20px;
+                    }
+                }
+                .spec {
+                    height: 221px;
+                }
+                .col-12 {
+                    width: 100%;
+
+                    h2 {
+                        margin-top: 60px;
+                        font-family: "pex";
+                        font-size: 32px;
+                        line-height: 30.48px;
+                        letter-spacing: -0.25px;
+                    }
+                    .row {
+                        margin-top: 40px;
+                        padding: 0;
+                        p {
+                            font-family: "pr";
+                            font-size: 14px;
+                            line-height: 20px;
+                        }
+                    }
+                }
+                .book-now {
+                    margin: 60px 0;
+                    width: 100%;
+                    height: 135px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    img {
+                        width: 20px;
+                        padding-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+@include xs {
+    .studio-detail {
+        .detail__main {
+            .container {
+                width: 100%;
+                border: none;
+                padding-bottom: 50px;
+                margin-bottom: 0px;
+            }
+            &-content {
+                height: 120px;
+                padding: 0px;
+                @include mid(true);
+                justify-content: space-between;
+                .content__left {
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    .dimensions {
+                        padding-left: 30px;
+                    }
+                }
+                .content__right {
+                    display: none;
+                }
+            }
+        }
+        .detail__content {
+            .container {
+                .row {
+                    padding-right: 0;
+
+                    .col-md-6 {
+                        padding-right: 0;
+                        .detail__floorplan {
+                            --heightContent: 40px;
+                            margin-top: 40px;
+                        }
+                    }
+                    .col-md-6 {
+                        .img {
+                            img {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+                    .col-12 {
+                        h2 {
+                            margin-top: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
